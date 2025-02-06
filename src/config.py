@@ -1,7 +1,9 @@
-DATA_DIR = "input/jpg_images"
+DATA_DIR = "/Users/arsh/Desktop/captcha/input/jpg_images"
 BATCH_SIZE = 8
 IMAGE_WIDTH = 300
 IMAGE_HEIGHT = 75
-NUM_WORKERS = 8
+NUM_WORKERS = 0
 EPOCHS = 10
-DEVICE = "cuda"
+import torch
+
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")

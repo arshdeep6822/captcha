@@ -30,7 +30,7 @@ class Classification:
         image = np.array(image)
         augmented = self.aug(image=image)
         image = augmented['image']
-        image = image.transpose(image, (2, 0, 1)).astype(np.float32)
+        image = image.transpose((2, 0, 1)).astype(np.float32)
         
         return {
             'images': torch.tensor(image, dtype=torch.float),
